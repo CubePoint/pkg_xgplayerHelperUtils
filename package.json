@@ -1,0 +1,61 @@
+{
+  "_from": "xgplayer-helper-utils@2.5.2",
+  "_id": "xgplayer-helper-utils@2.5.2",
+  "_inBundle": false,
+  "_integrity": "sha512-UYqk9mkysTdE8kAdunngzwohHNOzqS4O8SquERupq1pSVuGO4pNScovn6Gir0Ty4QxOteYKKkqXEgZHzOp4rqw==",
+  "_location": "/xgplayer-helper-utils",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "xgplayer-helper-utils@2.5.2",
+    "name": "xgplayer-helper-utils",
+    "escapedName": "xgplayer-helper-utils",
+    "rawSpec": "2.5.2",
+    "saveSpec": null,
+    "fetchSpec": "2.5.2"
+  },
+  "_requiredBy": [
+    "/xgplayer-helper-codec",
+    "/xgplayer-helper-transmuxers",
+    "/xgplayer-hls-live",
+    "/xgplayer-hls-vod"
+  ],
+  "_resolved": "https://registry.npmmirror.com/xgplayer-helper-utils/-/xgplayer-helper-utils-2.5.2.tgz",
+  "_shasum": "4c4e01f2e9dfa45ebbd68d8ae6e487b2c7a67a2a",
+  "_spec": "xgplayer-helper-utils@2.5.2",
+  "_where": "D:\\develop\\nodeJs\\projects\\leben\\client\\vsong\\node_modules\\xgplayer-hls-live",
+  "author": "",
+  "babel": {
+    "presets": [
+      [
+        "es2015",
+        {
+          "modules": false
+        }
+      ]
+    ]
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "eventemitter3": "^4.0.7",
+    "xgplayer-helper-models": "2.5.2"
+  },
+  "deprecated": false,
+  "description": "",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "name": "xgplayer-helper-utils",
+  "scripts": {
+    "build": "npm run build:es && npm run build:lib",
+    "build:es": "babel src --out-dir es && tsc",
+    "build:lib": "babel src --out-dir lib --presets=es2015 && tsc --module CommonJS --outDir lib",
+    "prepare": "npm run build",
+    "watch": "npm run watch:es & npm run watch:lib",
+    "watch:es": "babel src --out-dir es --watch",
+    "watch:lib": "babel src --out-dir lib --presets=es2015 --watch & tsc --watch"
+  },
+  "sideEffects": false,
+  "version": "2.5.2"
+}
