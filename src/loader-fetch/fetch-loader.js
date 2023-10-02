@@ -50,8 +50,13 @@ class FetchLoader {
     }
     Object.assign(params, { signal: this.abortController ? this.abortController.signal : undefined })
     const start = new Date().getTime()
+
+    let csFetch = null;
+    if (window.overrideXgFetch) csFetch = window.overrideXgFetch
+    else csFetch = fetch
+
     return Promise.race([
-      fetch(url, params),
+      csFetch(url, params),
       new Promise((resolve, reject) => {
         timer = setTimeout(() => {
           /* eslint-disable-next-line */

@@ -37,7 +37,7 @@ declare class FetchLoader {
         ok;
     }>;
     loading: boolean;
-    _retryTimer: NodeJS.Timeout;
+    _retryTimer: number;
     /**
      * @param {string}      url
      * @param {RequestInit} opts
@@ -49,7 +49,7 @@ declare class FetchLoader {
     }>;
     _onFetchResponse(response: any): void;
     _onReader(reader: any, taskno: any): void;
-    _noDataTimer: NodeJS.Timeout;
+    _noDataTimer: number;
     /**
      *
      * @param {RequestInit} opts

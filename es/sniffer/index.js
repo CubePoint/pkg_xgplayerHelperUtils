@@ -1,5 +1,4 @@
 import _PageVisibility from './page-visibility';
-
 var le = function () {
   var buf = new ArrayBuffer(2);
   new DataView(buf).setInt16(0, 256, true); // little-endian write
@@ -15,7 +14,6 @@ var sniffer = {
     var r = sniffer.os;
     return r.isPc ? 'pc' : r.isTablet ? 'tablet' : 'mobile';
   },
-
   get browser() {
     var ua = navigator.userAgent.toLowerCase();
     var reg = {
@@ -48,11 +46,9 @@ var sniffer = {
       isFireFox: isFireFox
     };
   },
-
   get isLe() {
     return le;
   }
 };
-
 export var PageVisibility = _PageVisibility;
 export default sniffer;

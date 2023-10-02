@@ -9,7 +9,7 @@ declare class XhrLoader {
     _bufferType: any;
     _requestInfo: {
         url: any;
-        options: {};
+        options: any;
         retryTimes: number;
         totalRetry: number;
         delayTime: number;

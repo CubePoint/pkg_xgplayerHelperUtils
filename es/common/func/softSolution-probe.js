@@ -1,8 +1,6 @@
-
 export default function () {
   var webAudioEnable = false;
   var webglEnable = false;
-
   try {
     var AudioContext = window.AudioContext || window.webkitAudioContext;
     var ctx = new AudioContext();
@@ -10,7 +8,6 @@ export default function () {
     ctx = null;
     webAudioEnable = true;
   } catch (e) {}
-
   try {
     var cvs = document.createElement('canvas');
     var validContextNames = ['webgl', 'experimental-webgl', 'moz-webgl', 'webkit-3d'];
@@ -24,13 +21,11 @@ export default function () {
       }
     }
   } catch (e) {}
-
   var WebComponentSupported = 'customElements' in window && window.customElements.define;
-  var isComponentDefined = void 0;
+  var isComponentDefined;
   if (WebComponentSupported) {
     var mVideo = window.customElements.get('live-video');
     isComponentDefined = mVideo && mVideo.isSupported();
   }
-
   return webAudioEnable && webglEnable && isComponentDefined;
 }

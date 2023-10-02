@@ -25,9 +25,9 @@ declare class MSE {
     remove(end: any, start?: number): void;
     _doCleanupSourceBuffer(): void;
     _doRemoveRanges(_pendingRemoveRanges: any): void;
-    cleanBuffers(): Promise<any[]>;
-    removeBuffers(): Promise<any[]>;
-    destroy(): Promise<void>;
+    cleanBuffers(): any;
+    removeBuffers(): any;
+    destroy(): any;
     set url(arg: any);
     get url(): any;
     noaudio: any;
